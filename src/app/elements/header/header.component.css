@@ -4,8 +4,13 @@
 
 .login-button{
     height: 100%;
-    margin-right: -16px;
     background: transparent;
     border: 0;
     font-size: smaller;
+    color: #ffffff;
+}
+
+mat-toolbar{
+    background-color: #B39DDB;
+    color: #ffffff;
 }

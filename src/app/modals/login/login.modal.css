@@ -1,0 +1,16 @@
+mat-form-field{
+    width: 100%;
+}
+
+button{
+    width: 100%;
+}
+
+button :hover{
+    background-color:  #D1C4E9;
+}
+
+.error{
+    color: #B71C1C;
+    font-size: small;
+}
