@@ -1,0 +1,11 @@
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+.login-button{
+    height: 100%;
+    margin-right: -16px;
+    background: transparent;
+    border: 0;
+    font-size: smaller;
+}
