@@ -19,6 +19,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { LoginService } from './modals/login/login.service';
+import { SlideshowModule } from 'ng-simple-slideshow'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { LoginService } from './modals/login/login.service';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    SlideshowModule
   ],
   entryComponents: [
     LoginModal
