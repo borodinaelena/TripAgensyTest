@@ -1,6 +1,6 @@
 .image-trip{
     object-fit: cover;
-    width: 400px;
+    width: 500px;
     height: 400px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .conteiner-image-trip{
-    width: 400px;
+    width: 500px;
     height: 400px;
     margin: 40px 20px 0px 20px;
     overflow: hidden;
@@ -27,7 +27,7 @@
     width: 200px;
     position: absolute;
     top: 175px;
-    left: 120px;
+    left: 170px;
     border-radius: 2%;
 }
 
