@@ -1,8 +1,13 @@
 <mat-toolbar>
-  <a class="title-button"><b>Trip Agency</b></a>
+  <a class="title-button" href="/"><b>Trip Agency</b></a>
 
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
+  <a href="/my-trips" class="my-trips-button" *ngIf="login === 'Logout'">
+    <i class="material-icons">
+      person
+    </i>
+  </a>
 
   <button class="login-button" (click)="showLoginModal()">{{login}}</button>
 </mat-toolbar>

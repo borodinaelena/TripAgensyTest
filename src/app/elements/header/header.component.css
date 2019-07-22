@@ -10,10 +10,21 @@
     color: #ffffff;
 }
 
+.login-button{
+    margin-left: 15px;
+}
+
 .title-button{
     font-size: larger;
     position: absolute;
     top: 15px;
+    text-decoration: none;
+}
+
+.my-trips-button{
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: 8px;
 }
 
 .login-button:focus, .title-button:focus{

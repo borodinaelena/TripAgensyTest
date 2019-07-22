@@ -1,0 +1,49 @@
+<div class="my-trips-content" *ngIf='trips'>
+  <!-- {{trips|json}} -->
+  <!-- <div *ngFor="let trip of trips"> {{trip |json}}</div> -->
+  <mat-accordion>
+    <mat-expansion-panel class="trip" *ngFor="let trip of trips">
+      <mat-expansion-panel-header class="trip-header">
+        <mat-panel-title>
+          {{trip.title}}
+        </mat-panel-title>
+        <mat-panel-description class="trip-description">
+          <div class="description-text">
+            {{trip.description}} </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <table class="trip-info-conteiner">
+        <tr>
+          <td class="trip-info">
+            <div class="flex-conteiner">
+              <h2>{{trip.title}}</h2>
+              <h3>{{trip.price | currency}}</h3>
+            </div>
+            <div class="flex-conteiner">
+              <h3>{{trip.location}}</h3>
+              <span><b>Rating: </b> {{trip.avgRating}}</span>
+            </div>
+            <div class="flex-conteiner">
+              {{trip.fromDate}} - {{trip.toDate}}
+              <i class="material-icons" *ngIf="!trip.like">
+                favorite_border
+              </i>
+              <i class="material-icons" *ngIf="trip.like">
+                favorite
+              </i>
+            </div>
+            <br>
+            {{trip.description}}
+            <br>
+
+
+          </td>
+          <td class="trip-image"><img src="{{trip.imageUrl}}"></td>
+        </tr>
+      </table>
+
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</div>

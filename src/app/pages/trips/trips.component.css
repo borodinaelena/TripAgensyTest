@@ -1,0 +1,57 @@
+.my-trips-content{
+    margin: 50px 100px;
+    width: 80%;
+    
+}
+
+.trip{
+    margin-bottom: 30px;
+    min-width: 650px;
+}
+
+.description-text{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.trip-description{
+    width: 50%;
+}
+
+.trip-info-conteiner{
+    width: 100%;
+}
+
+.trip-info i{
+    margin-top: -15px;
+}
+
+.trip-info-conteiner tr{
+    display: flex;
+}
+
+.flex-conteiner{
+    display: flex;
+    justify-content: space-between;
+
+}
+.trip-info{
+    padding-right: 20px;
+    flex: 1;
+}
+
+.trip-image{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 5px;
+    overflow: hidden;
+
+}
+
+.trip-image img{
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+}

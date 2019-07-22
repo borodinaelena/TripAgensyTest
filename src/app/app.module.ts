@@ -21,7 +21,11 @@ import { LocalStorageModule } from 'angular-2-local-storage';
 import { LoginService } from './modals/login/login.service';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { SliderComponent } from './elements/slider/slider.component'
-import { HomeService } from './pages/home/home.service'
+import { HomeService } from './pages/home/home.service';
+import { TripsComponent } from './pages/trips/trips.component';
+import { TripService } from './pages/trips/trips.service';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { HomeService } from './pages/home/home.service'
     HeaderComponent,
     FooterComponent,
     LoginModal,
-    SliderComponent
+    SliderComponent,
+    TripsComponent
   ],
   imports: [
     LocalStorageModule.forRoot({
@@ -49,14 +54,18 @@ import { HomeService } from './pages/home/home.service'
     FormsModule,
     HttpClientModule,
     MatFormFieldModule,
-    SlideshowModule
+    SlideshowModule,
+    MatExpansionModule,
+    MatGridListModule
+
   ],
   entryComponents: [
     LoginModal
   ],
   providers: [
     LoginService,
-    HomeService
+    HomeService,
+    TripService
   ],
   bootstrap: [AppComponent]
 })
