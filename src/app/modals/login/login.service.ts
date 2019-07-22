@@ -26,6 +26,6 @@ export class LoginService {
     getAccess() {
         this.isUserLogin = this._localStorageService.get('expires') && this._localStorageService.get('expires') > Date.now();
         this.onAccessChanged.emit(this.isUserLogin);
-        return this.isUserLogin;
+        return this.isUserLogin || false;
     }
 }

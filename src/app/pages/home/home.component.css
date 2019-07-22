@@ -1,6 +1,6 @@
 .image-trip{
     object-fit: cover;
-    width: 500px;
+    width: 450px;
     height: 400px;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .conteiner-image-trip{
-    width: 500px;
+    width: 450px;
     height: 400px;
     margin: 40px 20px 0px 20px;
     overflow: hidden;
@@ -29,8 +29,13 @@
     top: 175px;
     left: 170px;
     border-radius: 2%;
+    color: #000000;
 }
 
 .trip-price{
     margin: 10px 10px 20px 10px;
+}
+
+.no-access{
+    height: 100%;
 }

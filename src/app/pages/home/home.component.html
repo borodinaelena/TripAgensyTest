@@ -1,19 +1,21 @@
 <el-slider></el-slider>
 <div class="trip-list">
     <div class="trip-conteiner" *ngFor="let trip of trips">
-        <div class="conteiner-image-trip">
-            <img src="{{trip.imageUrl}}" class="image-trip">
-        </div>
-        <div class="trip-info">
-            <h3 class="trip-title">
-                {{trip.title}}
-            </h3>
-            <div class="trip-location">
-                {{trip.location}}
+        <a href="mailto:borodina.elena.25@gmail.com?subject=Want to get more information on ">
+            <div class="conteiner-image-trip">
+                <img src="{{trip.imageUrl}}" class="image-trip">
             </div>
-            <div class="trip-price">
-                {{trip.price | currency}}
+            <div class="trip-info">
+                <h3 class="trip-title">
+                    {{trip.title}}
+                </h3>
+                <div class="trip-location">
+                    {{trip.location}}
+                </div>
+                <div class="trip-price">
+                    {{trip.price | currency}}
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>

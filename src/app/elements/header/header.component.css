@@ -13,7 +13,7 @@
 .title-button{
     font-size: larger;
     position: absolute;
-    top: 10px;
+    top: 15px;
 }
 
 .login-button:focus, .title-button:focus{
