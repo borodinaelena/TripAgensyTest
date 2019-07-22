@@ -1,0 +1,36 @@
+.image-trip{
+    object-fit: cover;
+    width: 400px;
+    height: 400px;
+}
+
+.trip-list{
+    text-align: center;
+}
+
+.trip-conteiner{
+    display: inline-block;
+    position: relative;
+}
+
+.conteiner-image-trip{
+    width: 400px;
+    height: 400px;
+    margin: 40px 20px 0px 20px;
+    overflow: hidden;
+    border-radius: 2%;
+}
+
+.trip-info{
+    text-align: center;
+    background: #ffffff95;
+    width: 200px;
+    position: absolute;
+    top: 175px;
+    left: 120px;
+    border-radius: 2%;
+}
+
+.trip-price{
+    margin: 10px 10px 20px 10px;
+}

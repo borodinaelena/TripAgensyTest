@@ -2,12 +2,25 @@
     flex: 1 1 auto;
   }
 
-.login-button{
+.login-button, .title-button{
     height: 100%;
     background: transparent;
-    border: 0;
+    border: none;
     font-size: smaller;
     color: #ffffff;
+}
+
+.title-button{
+    font-size: larger;
+    position: absolute;
+    top: 10px;
+}
+
+.login-button:focus, .title-button:focus{
+    outline: none;
+}
+.login-button:hover , .title-button:hover{
+   color: #4A148C;
 }
 
 mat-toolbar{

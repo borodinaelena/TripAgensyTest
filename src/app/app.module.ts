@@ -19,7 +19,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { LoginService } from './modals/login/login.service';
-import { SlideshowModule } from 'ng-simple-slideshow'
+import { SlideshowModule } from 'ng-simple-slideshow';
+import { SliderComponent } from './elements/slider/slider.component'
+import { HomeService } from './pages/home/home.service'
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { SlideshowModule } from 'ng-simple-slideshow'
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    LoginModal
+    LoginModal,
+    SliderComponent
   ],
   imports: [
     LocalStorageModule.forRoot({
@@ -52,7 +55,8 @@ import { SlideshowModule } from 'ng-simple-slideshow'
     LoginModal
   ],
   providers: [
-    LoginService
+    LoginService,
+    HomeService
   ],
   bootstrap: [AppComponent]
 })

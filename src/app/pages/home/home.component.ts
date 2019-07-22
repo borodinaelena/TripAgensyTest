@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from './home.service'
+import { ITrip } from '../../interfaces/trips'
 
 @Component({
   selector: 'app-home',
@@ -6,37 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  example1SwipeOptions: any;
-  imageUrls: (any)[] = [
-    'assets/img/slider2.jpg',
-    'assets/img/slider3.jpg',
-    'assets/img/slider4.jpg'
-  ];
-  height: string = '400px';
-  minHeight: string;
-  arrowSize: string = '30px';
-  showArrows: boolean = true;
-  disableSwiping: boolean = false;
-  autoPlay: boolean = true;
-  autoPlayInterval: number = 3333;
-  stopAutoPlayOnSlide: boolean = true;
-  debug: boolean = false;
-  backgroundSize: string = 'cover';
-  backgroundPosition: string = 'center center';
-  backgroundRepeat: string = 'no-repeat';
-  showDots: boolean = true;
-  dotColor: string = '#FFF';
-  showCaptions: boolean = true;
-  captionColor: string = '#FFF';
-  captionBackground: string = 'rgba(0, 0, 0, .35)';
-  lazyLoad: boolean = false;
-  hideOnNoSlides: boolean = false;
-  width: string = '100%';
-  fullscreen: boolean = false;
-
-  constructor() {
+  trips: ITrip[];
+  constructor(private _homeService: HomeService) {
     console.log('HOME');
+    this._homeService.getTrips(4, 0)
+      .subscribe(data => this.trips = data)
+
   }
 
   ngOnInit() {
