@@ -26,6 +26,7 @@ import { TripsComponent } from './pages/trips/trips.component';
 import { TripService } from './pages/trips/trips.service';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { DemodataService } from './demodata/demodata.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FooterComponent,
     LoginModal,
     SliderComponent,
-    TripsComponent
+    TripsComponent,
   ],
   imports: [
     LocalStorageModule.forRoot({
@@ -65,7 +66,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
   providers: [
     LoginService,
     HomeService,
-    TripService
+    TripService,
+    DemodataService
   ],
   bootstrap: [AppComponent]
 })

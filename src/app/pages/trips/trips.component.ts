@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TripService } from './trips.service'
 import { IMyTrip } from '../../interfaces/trips'
 import { LoginService } from '../../modals/login/login.service';
+import { DemodataService } from '../../demodata/demodata.service'
 
 @Component({
   selector: 'app-trips',
@@ -12,15 +13,18 @@ export class TripsComponent implements OnInit {
   panelOpenState: any;
   trips: IMyTrip[];
   constructor(private _tripService: TripService,
-    private _loginService: LoginService) {
+    private _loginService: LoginService,
+    private _demodataService: DemodataService) {
     this._loginService.getAccess();
-    this._tripService.getTrips().subscribe(data => {
-      this.trips = data; console.log('trips', this.trips);
-      for (const trip of this.trips) {
-        trip.fromDate = this.getFormatedDate(trip.fromDate);
-        trip.toDate = this.getFormatedDate(trip.toDate);
-      }
-    })
+    this.trips = this._demodataService.getTrips();
+
+    // this._tripService.getTrips().subscribe(data => {
+    //   this.trips = data; console.log('trips', this.trips);
+    //   for (const trip of this.trips) {
+    //     trip.fromDate = this.getFormatedDate(trip.fromDate);
+    //     trip.toDate = this.getFormatedDate(trip.toDate);
+    //   }
+    // })
   }
 
   getFormatedDate(tripDate) {

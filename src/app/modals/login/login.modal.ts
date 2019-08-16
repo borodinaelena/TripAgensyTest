@@ -27,22 +27,36 @@ export class LoginModal implements OnInit {
   }
 
   login() {
-    this._loginService.login(this.user)
-      .subscribe(
-        (data) => {
-          this._localStorageService.set('token', data['accessToken']);
-          this._localStorageService.set('expires', Date.now() + data['expires']);
-          this._loginService.isUserLogin = true;
-          this.incorrect = false;
-          this._loginService.onAccessChanged.emit(this._loginService.isUserLogin);
-          this._loginService.getAccess() && this.dialogRef.close();
-        },
-        (err) => {
-          console.log(err);
-          this._loginService.isUserLogin = false;
-          this.incorrect = true;
-          this._loginService.onAccessChanged.emit(this._loginService.isUserLogin);
-        });
+    if (this.user.userName === 'test' && this.user.password === '1234test') {
+      this._localStorageService.set('token', '7648ryfhbq63tt823849gtfwfg28');
+      this._localStorageService.set('expires', Date.now() + 23456789345);
+      this._loginService.isUserLogin = true;
+      this.incorrect = false;
+      this._loginService.onAccessChanged.emit(this._loginService.isUserLogin);
+      this._loginService.getAccess() && this.dialogRef.close();
+    }
+    else {
+      this._loginService.isUserLogin = false;
+      this.incorrect = true;
+      this._loginService.onAccessChanged.emit(this._loginService.isUserLogin);
+    }
+
+    // this._loginService.login(this.user)
+    //   .subscribe(
+    //     (data) => {
+    //       this._localStorageService.set('token', data['accessToken']);
+    //       this._localStorageService.set('expires', Date.now() + data['expires']);
+    //       this._loginService.isUserLogin = true;
+    //       this.incorrect = false;
+    //       this._loginService.onAccessChanged.emit(this._loginService.isUserLogin);
+    //       this._loginService.getAccess() && this.dialogRef.close();
+    //     },
+    //     (err) => {
+    //       console.log(err);
+    //       this._loginService.isUserLogin = false;
+    //       this.incorrect = true;
+    //       this._loginService.onAccessChanged.emit(this._loginService.isUserLogin);
+    //     });
   }
 
 }
